@@ -16,6 +16,7 @@ class TestViews(TestCase):
         self.delete_url = reverse("delete")
 
     def test_home(self):
+        ''' test homepage function '''
         response = self.client.get(self.home_url)
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, "user_management/home.html")
@@ -26,6 +27,7 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, "user_management/login_page.html")
 
     def test_login_post(self):
+        ''' test loginpage function '''
         response = self.client.post(
             self.login_url, {"email": self.new_user.email, "password": self.new_user.password}
         )
@@ -38,6 +40,7 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, "user_management/signup.html")
 
     def test_register_post(self):
+        ''' test registration page function '''
         response = self.client.post(
             self.register_url, {"username": "king", "password": 1122}
         )
@@ -45,6 +48,7 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, "user_management/signup.html")
 
     def test_profile(self):
+        ''' test user profile page function '''
         response = self.client.get(self.profile_url)
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, "user_management/profile.html")
@@ -54,6 +58,7 @@ class TestViews(TestCase):
         self.assertEquals(response.status_code, 200)
 
     def test_delete_user_post(self):
+        ''' test delete user page function '''
         self.client.force_login(self.new_user)
         response = self.client.post(
             self.delete_url, {"email": f"{self.new_user.email}"})
@@ -62,6 +67,7 @@ class TestViews(TestCase):
         self.assertEquals(deleted, False)
 
     def test_search(self):
+        ''' test movie search page function '''
         self.client.force_login(self.new_user)
         response = self.client.get(
             self.search_url+'?title=avengers')

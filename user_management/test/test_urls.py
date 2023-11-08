@@ -6,7 +6,7 @@ class TestUrls(SimpleTestCase):
     def test_login_url_is_resolved(self):
         url =reverse('login')
         print (resolve(url))
-        self.assertEqual(resolve(url).func, Login)
+        self.assertEqual(resolve(url).func, login_user)
 
     def test_home_url_is_resolved(self):
         url =reverse('home')
@@ -16,7 +16,7 @@ class TestUrls(SimpleTestCase):
     def test_logout_url_is_resolved(self):
         url =reverse('logout')
         print (resolve(url))
-        self.assertEqual(resolve(url).func, Logout)
+        self.assertEqual(resolve(url).func, logout_user)
 
     def test_register_url_is_resolved(self):
         url =reverse('register')

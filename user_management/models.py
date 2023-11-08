@@ -12,6 +12,7 @@ def upload_to(instance, filename):
 
 
 class MyUserManager(BaseUserManager):
+    ''' custom user manager made to overide django default manager '''
     def create_user(self, email, password=None, first_name=None, last_name=None):
         if not email:
             raise ValueError('Users must have an email address')
@@ -37,6 +38,7 @@ class MyUserManager(BaseUserManager):
 
 
 class MyUser(AbstractBaseUser):
+    ''' custom user model made to overide django default user model for the purpose of profile_image field '''
     email = models.EmailField(
         max_length=255, unique=True, blank=True, null=True)
     is_admin = models.BooleanField(default=False)
