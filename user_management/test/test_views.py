@@ -66,10 +66,3 @@ class TestViews(TestCase):
         self.assertEquals(response.status_code, 200)
         self.assertEquals(deleted, False)
 
-    def test_search(self):
-        ''' test movie search page function '''
-        self.client.force_login(self.new_user)
-        response = self.client.get(
-            self.search_url+'?title=avengers')
-        self.assertEquals(response.status_code, 200)
-

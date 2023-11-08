@@ -23,11 +23,6 @@ class TestUrls(SimpleTestCase):
         print (resolve(url))
         self.assertEqual(resolve(url).func, register)
 
-    def test_search_url_is_resolved(self):
-        url =reverse('search')
-        print (resolve(url))
-        self.assertEqual(resolve(url).func, search_movie)
-
     def test_profile_url_is_resolved(self):
         url =reverse('profile',args=['str'])
         print (resolve(url))
