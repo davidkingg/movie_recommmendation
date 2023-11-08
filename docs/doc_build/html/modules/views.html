@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Views &#8212; movie_recommendation 1.0 documentation</title>
+    <title>User_Views &#8212; movie_recommendation 1.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=4f649999" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=039e1c02" />
     <script src="../_static/documentation_options.js?v=f2a433a1"></script>
@@ -32,7 +32,7 @@
           <div class="body" role="main">
             
   <section id="module-user_management.views">
-<span id="views"></span><h1>Views<a class="headerlink" href="#module-user_management.views" title="Link to this heading">¶</a></h1>
+<span id="user-views"></span><h1>User_Views<a class="headerlink" href="#module-user_management.views" title="Link to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="user_management.views.delete_user">
 <span class="sig-prename descclassname"><span class="pre">user_management.views.</span></span><span class="sig-name descname"><span class="pre">delete_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#user_management.views.delete_user" title="Link to this definition">¶</a></dt>
@@ -58,12 +58,6 @@
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="user_management.views.movie_detail">
-<span class="sig-prename descclassname"><span class="pre">user_management.views.</span></span><span class="sig-name descname"><span class="pre">movie_detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#user_management.views.movie_detail" title="Link to this definition">¶</a></dt>
-<dd><p>fetches a movie. the imdb ID if the movie must be provided</p>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="user_management.views.profile">
 <span class="sig-prename descclassname"><span class="pre">user_management.views.</span></span><span class="sig-name descname"><span class="pre">profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#user_management.views.profile" title="Link to this definition">¶</a></dt>
 <dd><p>renders the profile page of a user using the userID as a query parameter</p>
@@ -76,15 +70,24 @@
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="user_management.views.search_movie">
-<span class="sig-prename descclassname"><span class="pre">user_management.views.</span></span><span class="sig-name descname"><span class="pre">search_movie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#user_management.views.search_movie" title="Link to this definition">¶</a></dt>
-<dd><p>searches for a movie with the title alone and returns multiple match where possible</p>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="user_management.views.update">
 <span class="sig-prename descclassname"><span class="pre">user_management.views.</span></span><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#user_management.views.update" title="Link to this definition">¶</a></dt>
 <dd><p>updates a user information like profile picture and name</p>
+</dd></dl>
+
+</section>
+<section id="module-movie_search.views">
+<span id="movie-views"></span><h1>Movie_Views<a class="headerlink" href="#module-movie_search.views" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="movie_search.views.movie_detail">
+<span class="sig-prename descclassname"><span class="pre">movie_search.views.</span></span><span class="sig-name descname"><span class="pre">movie_detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#movie_search.views.movie_detail" title="Link to this definition">¶</a></dt>
+<dd><p>fetches a movie. the imdb ID if the movie must be provided</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="movie_search.views.search_movie">
+<span class="sig-prename descclassname"><span class="pre">movie_search.views.</span></span><span class="sig-name descname"><span class="pre">search_movie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#movie_search.views.search_movie" title="Link to this definition">¶</a></dt>
+<dd><p>searches for a movie with the title alone and returns multiple match where possible</p>
 </dd></dl>
 
 </section>
@@ -109,16 +112,19 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="all-about-me.html">All about me</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Views</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User_Views</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#user_management.views.delete_user"><code class="docutils literal notranslate"><span class="pre">delete_user()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#user_management.views.home"><code class="docutils literal notranslate"><span class="pre">home()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#user_management.views.login_user"><code class="docutils literal notranslate"><span class="pre">login_user()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#user_management.views.logout_user"><code class="docutils literal notranslate"><span class="pre">logout_user()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#user_management.views.movie_detail"><code class="docutils literal notranslate"><span class="pre">movie_detail()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#user_management.views.profile"><code class="docutils literal notranslate"><span class="pre">profile()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#user_management.views.register"><code class="docutils literal notranslate"><span class="pre">register()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#user_management.views.search_movie"><code class="docutils literal notranslate"><span class="pre">search_movie()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#user_management.views.update"><code class="docutils literal notranslate"><span class="pre">update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#module-movie_search.views">Movie_Views</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#movie_search.views.movie_detail"><code class="docutils literal notranslate"><span class="pre">movie_detail()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#movie_search.views.search_movie"><code class="docutils literal notranslate"><span class="pre">search_movie()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="test.html">Test</a></li>
