@@ -25,9 +25,9 @@ AUTH_USER_MODEL = 'user_management.MyUser'
 SECRET_KEY = 'django-insecure-yutwr*d377j=-qkiej657m-b$%3_ron4-9o&10e69^*so5t8k%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
