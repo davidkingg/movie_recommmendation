@@ -17,4 +17,4 @@ For this project I decided to use the following tools:
 this project contains 19 unit test which can be run with the command `python manage.py test`
 
 # Documentation
-to view the documentation of the functions in the code check this link - (https://htmlpreview.github.io/?https://github.com/davidkingg/movie_recommmendation/blob/main/docs/doc_build/html/index.html)
+to view the documentation of the functions in the code check this link - (https://2cxsbeaby9tesnyiejhxfa.on.drv.tw/doc_html/#)
