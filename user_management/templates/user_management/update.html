@@ -1,0 +1,28 @@
+{% extends 'main.html'%}
+{% block content%}
+{% load static %}
+<div>
+    <form action="update" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <!-- <label>first name:</label>
+        <input type='text' name='first name'  value={{data.first_name}}></input> <br>
+
+        <label>last name:</label>
+        <input type='text' name='name' placeholder={{first_name}} value={{first_name}}></input> <br>
+
+        <label>email:</label>
+        <input type='text' name='family_name' placeholder={{family_name}} value={{family_name}}></input> <br>
+        
+        <label>password:</label>
+        <input type='text' name='phone' placeholder={{phone}} value={{phone}}></input> <br> -->
+
+
+
+
+        <input type='submit' value='Update'></input><br>
+
+    </form>
+</div>
+
+{% endblock content%}

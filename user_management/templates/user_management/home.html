@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<main class="">
+  <div class="container">
+      <br>
+      <h2> Home Page</h2>
+      <br>
+      {% if not request.user.is_authenticated %}
+      <h2> Please login/register to search your favourite movies...</h2>
+      {% endif %}
+      {% if request.user.is_authenticated %}
+      <h2> <a href="{% url 'movie_detail'%}"> Check a movie information </a> </h2>
+      {% endif %}
+      {% endblock content %}
+  </div>
+</main>

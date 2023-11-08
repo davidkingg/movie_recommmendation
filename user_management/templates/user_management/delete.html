@@ -1,0 +1,15 @@
+{% extends 'main.html'%}
+{% block content%}
+<div>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label>Enter Email address to confirm delete:</label>
+        <input type='email' name='email' placeholder="Enter your email"></input> <br>
+
+
+        <input type='submit' value='Delete'></input>
+
+    </form>
+</div>
+
+{% endblock content%}
