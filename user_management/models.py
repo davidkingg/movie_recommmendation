@@ -47,6 +47,7 @@ class MyUser(AbstractBaseUser):
     image = models.ImageField(
         _("Image"), upload_to=upload_to, default='default.png')
     is_active = models.BooleanField(default=True)
+    username = models.CharField(blank=True, null=True, max_length=30)
 
     objects = MyUserManager()
 
@@ -68,6 +69,7 @@ class MyUser(AbstractBaseUser):
 
     # Override the save method of the model
     def save(self, using=None, *args, **kwargs):
+        self.username = self.email
         if using:
             super().save(using=using)
         else:
