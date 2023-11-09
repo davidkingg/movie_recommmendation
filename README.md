@@ -18,3 +18,9 @@ this project contains 19 unit test which can be run with the command `python man
 
 # Documentation
 to view the documentation of the functions in the code check this link - (https://2cxsbeaby9tesnyiejhxfa.on.drv.tw/doc_html/#)
+
+to view api swagger documentation check this link - (https://movie-recommendation-182l.onrender.com/swagger/)
+
+there are two major apis endpoint
+1. user endpoint
+2. movie endpoint
